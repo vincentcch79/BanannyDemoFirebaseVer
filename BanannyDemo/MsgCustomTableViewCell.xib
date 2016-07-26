@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MsgCustomTableViewCell" customModule="BanannyDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-c6-jam">
+                        <rect key="frame" x="20" y="13" width="69" height="69"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="LWB-hM-Qkk"/>
+                            <constraint firstAttribute="height" constant="69" id="jU4-7F-m5O"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="34.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bananny 官方訊息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJn-1i-nYI">
+                        <rect key="frame" x="105" y="8" width="152" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="HvE-W2-tu3"/>
+                            <constraint firstAttribute="width" constant="152" id="Lh6-nr-oBC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="18"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016/08/03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIo-qM-0MS">
+                        <rect key="frame" x="288" y="11" width="79" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="c6i-HC-JXr"/>
+                            <constraint firstAttribute="width" constant="79" id="n3Z-9t-4wT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請客服幫我這個問題，我看不到保姆的資料..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W94-By-lGA">
+                        <rect key="frame" x="105" y="37.5" width="234" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Cgy-5v-FZF"/>
+                            <constraint firstAttribute="width" constant="234" id="Eye-i8-cQ4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="4Gb-c6-jam" secondAttribute="bottom" constant="5.5" id="7ec-vL-2rq"/>
+                    <constraint firstItem="AJn-1i-nYI" firstAttribute="leading" secondItem="4Gb-c6-jam" secondAttribute="trailing" constant="16" id="Eer-F0-rj1"/>
+                    <constraint firstItem="W94-By-lGA" firstAttribute="leading" secondItem="4Gb-c6-jam" secondAttribute="trailing" constant="16" id="WpQ-tk-BjX"/>
+                    <constraint firstItem="4Gb-c6-jam" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="erI-lY-P7l"/>
+                    <constraint firstAttribute="trailing" secondItem="CIo-qM-0MS" secondAttribute="trailing" constant="8" id="f9P-re-efR"/>
+                    <constraint firstAttribute="bottom" secondItem="W94-By-lGA" secondAttribute="bottom" constant="8" id="jVE-Bx-g88"/>
+                    <constraint firstItem="AJn-1i-nYI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="kpf-KJ-eSJ"/>
+                    <constraint firstItem="4Gb-c6-jam" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="l9r-3F-fev"/>
+                    <constraint firstItem="CIo-qM-0MS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="mIT-eu-lAm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="msgBackgroundView" destination="H2p-sc-9uM" id="foH-KR-nbn"/>
+                <outlet property="msgContentLabel" destination="W94-By-lGA" id="YEI-JY-ntc"/>
+                <outlet property="msgDateLabel" destination="CIo-qM-0MS" id="4MJ-xq-gbQ"/>
+                <outlet property="msgImageView" destination="4Gb-c6-jam" id="XSG-Oa-hTb"/>
+                <outlet property="msgTitleLabel" destination="AJn-1i-nYI" id="X2w-Br-sou"/>
+            </connections>
+            <point key="canvasLocation" x="353" y="303"/>
+        </tableViewCell>
+    </objects>
+</document>
