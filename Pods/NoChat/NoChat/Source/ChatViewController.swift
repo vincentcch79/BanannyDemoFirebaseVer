@@ -11,6 +11,7 @@ import UIKit
 public struct HeightChange {
     let oldHeight: CGFloat
     let newHeight: CGFloat
+  
     
     public init(oldHeight: CGFloat, newHeight: CGFloat) {
         self.oldHeight = oldHeight

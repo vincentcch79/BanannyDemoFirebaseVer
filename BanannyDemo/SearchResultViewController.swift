@@ -25,7 +25,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         
         
-        
+        self.view.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
         self.navigationController?.navigationBar.translucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 238/255, blue: 184/255, alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 138/255, green: 132/255, blue: 101/255, alpha: 1)
@@ -42,6 +42,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         searchTableView.estimatedRowHeight = 180
         searchTableView.rowHeight = UITableViewAutomaticDimension
         searchTableView.registerNib(UINib(nibName: "SearchResultTableViewCell", bundle: nil), forCellReuseIdentifier: customCellIdentifier)
+        searchTableView.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
         
         
     }

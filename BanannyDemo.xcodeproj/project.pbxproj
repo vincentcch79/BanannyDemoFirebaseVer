@@ -49,6 +49,8 @@
 		9F2EE1CC1D3885AE00F05354 /* TGChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EE1CB1D3885AE00F05354 /* TGChatViewController.swift */; };
 		9F31214B1D45A6E70082D80C /* paymentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31214A1D45A6E70082D80C /* paymentClass.swift */; };
 		9F31214D1D46FB480082D80C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F31214C1D46FB480082D80C /* GoogleService-Info.plist */; };
+		9F3121501D46FF770082D80C /* loginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31214F1D46FF770082D80C /* loginHelper.swift */; };
+		9F3121551D4714230082D80C /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3121541D4714230082D80C /* NewChatViewController.swift */; };
 		9F3CA68B1D3CCB6E003555F7 /* DashTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CA68A1D3CCB6E003555F7 /* DashTabBarViewController.swift */; };
 		9F76F9B41D37A7C0003ABE22 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76F9B31D37A7C0003ABE22 /* SearchResultViewController.swift */; };
 		9F76F9B71D37D980003ABE22 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76F9B51D37D980003ABE22 /* SearchResultTableViewCell.swift */; };
@@ -107,6 +109,8 @@
 		9F2EE1CB1D3885AE00F05354 /* TGChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGChatViewController.swift; sourceTree = "<group>"; };
 		9F31214A1D45A6E70082D80C /* paymentClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paymentClass.swift; sourceTree = "<group>"; };
 		9F31214C1D46FB480082D80C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F31214F1D46FF770082D80C /* loginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginHelper.swift; sourceTree = "<group>"; };
+		9F3121541D4714230082D80C /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		9F3CA68A1D3CCB6E003555F7 /* DashTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashTabBarViewController.swift; sourceTree = "<group>"; };
 		9F76F9B31D37A7C0003ABE22 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		9F76F9B51D37D980003ABE22 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		9F25995B1D377ACA0064C105 /* BanannyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9F3121511D47100D0082D80C /* JSQChatView */,
 				9F31214E1D46FB5F0082D80C /* SupportingFiles */,
 				9F2EE1C41D3884FE00F05354 /* ChatVC */,
 				9F2599731D37820D0064C105 /* Controller */,
@@ -178,6 +183,7 @@
 				9F14D3931D3E6CE200530EF6 /* NotifClass.swift */,
 				9F2C62D81D3F26DD001195A0 /* MsgClass.swift */,
 				9F31214A1D45A6E70082D80C /* paymentClass.swift */,
+				9F31214F1D46FF770082D80C /* loginHelper.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -255,6 +261,14 @@
 				9F2599631D377ACA0064C105 /* Assets.xcassets */,
 			);
 			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		9F3121511D47100D0082D80C /* JSQChatView */ = {
+			isa = PBXGroup;
+			children = (
+				9F3121541D4714230082D80C /* NewChatViewController.swift */,
+			);
+			name = JSQChatView;
 			sourceTree = "<group>";
 		};
 		E85C9F213A556057D5262F49 /* Pods */ = {
@@ -431,11 +445,13 @@
 				9F2C62CF1D3F16E1001195A0 /* RatingActionViewController.swift in Sources */,
 				9F14D38E1D3E31E800530EF6 /* ConfirmMsgView.swift in Sources */,
 				9F14D39C1D3E766B00530EF6 /* OfficialWelcomeViewController.swift in Sources */,
+				9F3121501D46FF770082D80C /* loginHelper.swift in Sources */,
 				9F2C62D11D3F1F59001195A0 /* OtherRatingViewController.swift in Sources */,
 				9F76F9BA1D37D99C003ABE22 /* SearchResultClass.swift in Sources */,
 				9F14D39A1D3E715800530EF6 /* RatingNotifViewController.swift in Sources */,
 				9F2EE1CC1D3885AE00F05354 /* TGChatViewController.swift in Sources */,
 				9F31214B1D45A6E70082D80C /* paymentClass.swift in Sources */,
+				9F3121551D4714230082D80C /* NewChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,9 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import GoogleSignIn
 
-
-class ParentFirstViewController: UIViewController {
+class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
     @IBOutlet weak var parentNormalLoginButton: UIButton!
     @IBOutlet weak var parentFBLoginButton: UIButton!
@@ -32,6 +32,10 @@ class ParentFirstViewController: UIViewController {
         self.parentFBLoginButton.backgroundColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1)
         
         // Do any additional setup after loading the view.
+        //GIDSignIn
+        GIDSignIn.sharedInstance().clientID = "134113229853-1rhvp7nmcih0puqa8urgqa3h9g6fh4hg.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
 
     }
     
@@ -76,6 +80,21 @@ class ParentFirstViewController: UIViewController {
                 }
             })
         }
+    }
+    @IBAction func googleLoginDidTapped(sender: AnyObject) {
+        print("google signin did tapped")
+        GIDSignIn.sharedInstance().signIn()
+        
+        
+    }
+    
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+        if error != nil {
+            print(error!.localizedDescription)
+            return
+        }
+        print(user.authentication)
+        Helper.helper.loginWithGoogle(user.authentication)
     }
     
 }

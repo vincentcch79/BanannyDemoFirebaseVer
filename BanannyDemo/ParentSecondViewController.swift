@@ -60,9 +60,7 @@ class ParentSecondViewController: UIViewController {
     }
     */
     @IBAction func parentLoginButton(sender: AnyObject) {
-        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let DashTabBarViewController: UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("DashTabBar")
-        self.presentViewController(DashTabBarViewController, animated: true, completion: nil)
+        Helper.helper.loginAnonymously()
     }
 
 }

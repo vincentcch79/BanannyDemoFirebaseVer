@@ -18,6 +18,8 @@ target 'BanannyDemo' do
   pod 'FBSDKCoreKit'
   pod 'SDWebImage'
   pod 'BetterSegmentedControl'
+  pod 'GoogleSignIn'
+  pod 'JSQMessagesViewController'
   # Pods for BanannyDemo
 
 end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5gQ-7k-hzi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -181,13 +181,26 @@
                                     <constraint firstAttribute="width" constant="253" id="jfd-0Z-5qb"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-zp-lNH">
+                                <rect key="frame" x="270" y="381" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NoV-cX-lvq"/>
+                                    <constraint firstAttribute="width" constant="60" id="UFO-e0-d5o"/>
+                                </constraints>
+                                <state key="normal" image="googleButton"/>
+                                <connections>
+                                    <action selector="googleLoginDidTapped:" destination="5gQ-7k-hzi" eventType="touchUpInside" id="KsJ-Zz-3XD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lCk-zp-lNH" firstAttribute="centerX" secondItem="pr7-ST-mTa" secondAttribute="centerX" id="2pR-ae-YUI"/>
                             <constraint firstItem="q0Q-Ks-nmV" firstAttribute="top" secondItem="KE8-27-3PJ" secondAttribute="bottom" id="Ds6-hv-D6z"/>
                             <constraint firstItem="KE8-27-3PJ" firstAttribute="leading" secondItem="Mf8-RJ-wbQ" secondAttribute="leading" id="HoS-I4-dJY"/>
                             <constraint firstItem="KE8-27-3PJ" firstAttribute="top" secondItem="Mf8-RJ-wbQ" secondAttribute="top" id="OHj-9j-UDC"/>
                             <constraint firstItem="C4t-mi-Dtx" firstAttribute="top" secondItem="6Eh-Ab-c6K" secondAttribute="bottom" constant="276" id="Ps5-Vp-9aj"/>
+                            <constraint firstItem="pr7-ST-mTa" firstAttribute="top" secondItem="lCk-zp-lNH" secondAttribute="bottom" constant="27" id="TW8-H3-T2t"/>
                             <constraint firstItem="KE8-27-3PJ" firstAttribute="top" secondItem="6Eh-Ab-c6K" secondAttribute="bottom" constant="-267" id="WLG-oO-w6z"/>
                             <constraint firstItem="C4t-mi-Dtx" firstAttribute="centerX" secondItem="KE8-27-3PJ" secondAttribute="centerX" id="aoP-6G-8ov"/>
                             <constraint firstItem="6Eh-Ab-c6K" firstAttribute="centerX" secondItem="KE8-27-3PJ" secondAttribute="centerX" id="bxX-XC-Rg8"/>
@@ -2250,6 +2263,35 @@
             </objects>
             <point key="canvasLocation" x="7195" y="-2752"/>
         </scene>
+        <!--New Chat View Controller-->
+        <scene sceneID="kyg-fU-jOy">
+            <objects>
+                <viewController id="gBd-fy-vWI" customClass="NewChatViewController" customModule="BanannyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m7v-dv-dzv"/>
+                        <viewControllerLayoutGuide type="bottom" id="ptB-DF-nHL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K7I-vY-aDp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zRe-4N-yAp">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="P87-Yf-uVB">
+                            <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="switchDetail:" destination="gBd-fy-vWI" id="kls-PS-4is"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="預約" style="done" id="119-SE-6Kl">
+                            <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFY-fh-CAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7195" y="-3656"/>
+        </scene>
         <!--Babysitter Dashboard View Controller-->
         <scene sceneID="akT-oh-abq">
             <objects>
@@ -2646,8 +2688,28 @@
             </objects>
             <point key="canvasLocation" x="5120" y="641"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ed2-du-O0e">
+            <objects>
+                <navigationController storyboardIdentifier="ChatNaviVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aka-mu-UO3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FpX-OH-FHI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.93333333330000001" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gBd-fy-vWI" kind="relationship" relationship="rootViewController" id="0dz-9S-R1Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXb-aD-vaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6428" y="-3656"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="googleButton" width="60" height="60"/>
         <image name="icon_msg_congrats" width="54" height="54"/>
         <image name="icon_tick" width="24" height="18"/>
         <image name="ios_opening_bg" width="187" height="333"/>
