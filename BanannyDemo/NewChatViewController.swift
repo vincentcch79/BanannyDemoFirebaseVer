@@ -17,7 +17,9 @@ class NewChatViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     var searchChatDetail: searchResult!
     var messageRef = FIRDatabase.database().reference().child("messages")
-    
+    var incomingAvatar: JSQMessagesAvatarImage!
+    var outgoingAvatar: JSQMessagesAvatarImage!
+   
     
     @IBAction func switchDetail(sender: AnyObject) {
         
@@ -26,11 +28,6 @@ class NewChatViewController: JSQMessagesViewController {
         let DashTabBarViewController: UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("DashTabBarViewController")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.window?.rootViewController = DashTabBarViewController
-        
-//        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let SearchDetailViewController: UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("SearchDetailViewController")
-//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        appDelegate.window?.rootViewController = SearchDetailViewController
         
     }
     override func viewDidLoad() {
@@ -41,6 +38,11 @@ class NewChatViewController: JSQMessagesViewController {
         
         //define Firebase Database
         observeMessages()
+        
+        //
+        self.incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "nanny_profile_01")!, diameter: 64)
+        self.outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "user_profile")!, diameter: 64)
+        
     }
     
     func observeMessages() {
@@ -58,15 +60,15 @@ class NewChatViewController: JSQMessagesViewController {
     }
     
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
-        
-//        messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text))
-//        collectionView.reloadData()
-        
+
+        inputToolbar.contentView.textView.text = ""
         let newMessage = messageRef.childByAutoId()
         let messageData = ["text": text, "senderId": senderId, "senderName": senderDisplayName, "MediaType": "TEXT"]
         newMessage.setValue(messageData)
         
     }
+    
+    
     
     override func didPressAccessoryButton(sender: UIButton!) {
         print("didPressAccessoryButton")
@@ -86,10 +88,6 @@ class NewChatViewController: JSQMessagesViewController {
         sheet.addAction(cancel)
         self.presentViewController(sheet, animated: true, completion: nil)
         
-        
-//        let imagePicker = UIImagePickerController()
-//        imagePicker.delegate = self
-//        self.presentViewController(imagePicker, animated: true, completion: nil)
         
     }
     func getMediaFrom(type: CFString) {
@@ -123,16 +121,39 @@ class NewChatViewController: JSQMessagesViewController {
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
         
-        let bubbleFactory = JSQMessagesBubbleImageFactory()
-        return bubbleFactory.outgoingMessagesBubbleImageWithColor(.lightGrayColor())
+//        let bubbleFactory = JSQMessagesBubbleImageFactory()
+//        return bubbleFactory.outgoingMessagesBubbleImageWithColor(.lightGrayColor())
+        if messages[indexPath.item].senderId == senderId {
+            return
+            JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor(red: 112/255, green: 192/255, blue: 75/255, alpha: 1))
+            
+        } else {
+            return
+            JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1))
+        }
+        
+        
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
-        return nil
+        let message = self.messages[indexPath.item]
+        if message.senderId == self.senderId {
+            return self.outgoingAvatar
+        }
+        return incomingAvatar
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
+        if messages[indexPath.item].senderId == senderId {
+            
+            cell.textView?.textColor = UIColor.whiteColor()
+            
+        } else {
+            
+            cell.textView?.textColor = UIColor.darkGrayColor()
+        }
+        
         return cell
     }
     
