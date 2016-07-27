@@ -47,10 +47,11 @@ class ViewController: UIViewController {
             let viewcontroller = self.storyboard?.instantiateViewControllerWithIdentifier("ParentFirstViewController") as! ParentFirstViewController
             self.presentViewController(viewcontroller, animated: false, completion: nil)
         }
-    }
-
-
+//    }
+//        let viewcontroller = self.storyboard?.instantiateViewControllerWithIdentifier("ParentFirstViewController") as! ParentFirstViewController
+//            self.presentViewController(viewcontroller, animated: false, completion: nil)
+//    }
 }
 
-
+}
 

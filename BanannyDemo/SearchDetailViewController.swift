@@ -9,6 +9,7 @@
 import UIKit
 import Cosmos
 import NoChat
+import JSQMessagesViewController
 
 class SearchDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -63,6 +64,11 @@ class SearchDetailViewController: UIViewController, UITableViewDelegate, UITable
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = false
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -175,10 +181,14 @@ class SearchDetailViewController: UIViewController, UITableViewDelegate, UITable
         
         
         // JSQChatView
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let naviVC = storyboard.instantiateViewControllerWithIdentifier("ChatNaviVC") as! UINavigationController
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.window?.rootViewController = naviVC
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let naviVC = storyboard.instantiateViewControllerWithIdentifier("ChatNaviVC") as! UINavigationController
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = naviVC
+        let chatVC = NewChatViewController() as JSQMessagesViewController
+        
+        self.navigationController?.pushViewController(chatVC, animated: true)
+        
        
         
         

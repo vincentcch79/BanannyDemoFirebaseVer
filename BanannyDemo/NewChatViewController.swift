@@ -21,21 +21,30 @@ class NewChatViewController: JSQMessagesViewController {
     var outgoingAvatar: JSQMessagesAvatarImage!
    
     
-    @IBAction func switchDetail(sender: AnyObject) {
+
         
-        
-        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let DashTabBarViewController: UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("DashTabBarViewController")
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.window?.rootViewController = DashTabBarViewController
-        
-    }
+//        
+//        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let DashTabBarViewController: UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("DashTabBarViewController")
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = DashTabBarViewController
+//        let SearchDetailViewController: UIViewController =
+//        mainStoryBoard.instantiateViewControllerWithIdentifier("SearchDetailView")
+//        self.presentViewController(SearchDetailViewController, animated: false, completion: nil)
+//        let SearchDetailViewController: UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("SearchDetailView")
+//        self.presentViewController(SearchDetailViewController, animated: true, completion: nil)
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.senderId = "one"
-        self.senderDisplayName = "Vinny"
+//        self.senderId = "one"
+//        self.senderDisplayName = "Vinny"
+        self.senderId = "two"
+        self.senderDisplayName = "Jane"
+        self.view.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
         
-        
+        self.tabBarController?.tabBar.hidden = true
+
         //define Firebase Database
         observeMessages()
         
@@ -125,7 +134,7 @@ class NewChatViewController: JSQMessagesViewController {
 //        return bubbleFactory.outgoingMessagesBubbleImageWithColor(.lightGrayColor())
         if messages[indexPath.item].senderId == senderId {
             return
-            JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor(red: 112/255, green: 192/255, blue: 75/255, alpha: 1))
+            JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor(red: 220/255, green: 220/255, blue: 233/255, alpha: 1))
             
         } else {
             return

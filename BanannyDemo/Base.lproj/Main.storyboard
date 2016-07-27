@@ -131,7 +131,7 @@
         <!--Parent First View Controller-->
         <scene sceneID="cOw-mv-GLq">
             <objects>
-                <viewController id="5gQ-7k-hzi" customClass="ParentFirstViewController" customModule="BanannyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ParentFirstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5gQ-7k-hzi" customClass="ParentFirstViewController" customModule="BanannyDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Oos-Ai-O3E"/>
                         <viewControllerLayoutGuide type="bottom" id="q0Q-Ks-nmV"/>
@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGD-SE-9vM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1947" y="-36"/>
+            <point key="canvasLocation" x="2019" y="-44"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MBG-X5-Itr">
@@ -727,7 +727,7 @@
         <!--Search Result View Controller-->
         <scene sceneID="S2z-uX-xNs">
             <objects>
-                <viewController storyboardIdentifier="searchView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Fb-m2-zml" customClass="SearchResultViewController" customModule="BanannyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchview" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Fb-m2-zml" customClass="SearchResultViewController" customModule="BanannyDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lQG-0T-utB"/>
                         <viewControllerLayoutGuide type="bottom" id="QZP-m3-oiK"/>
@@ -2687,25 +2687,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KxT-ql-pGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5120" y="641"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ed2-du-O0e">
-            <objects>
-                <navigationController storyboardIdentifier="ChatNaviVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aka-mu-UO3" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FpX-OH-FHI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.93333333330000001" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gBd-fy-vWI" kind="relationship" relationship="rootViewController" id="0dz-9S-R1Q"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iXb-aD-vaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6428" y="-3656"/>
         </scene>
     </scenes>
     <resources>
