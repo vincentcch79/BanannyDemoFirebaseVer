@@ -15,7 +15,8 @@ class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
     
     @IBOutlet weak var parentNormalLoginButton: UIButton!
     @IBOutlet weak var parentFBLoginButton: UIButton!
-
+    @IBOutlet weak var parentSignUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +25,17 @@ class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
         // button ui setting
-        self.parentNormalLoginButton.backgroundColor = UIColor(red: 255/255, green: 246/255, blue: 219/255, alpha: 1)
-        self.parentNormalLoginButton.tintColor = UIColor(red: 143/255, green: 143/255, blue: 143/255, alpha: 1)
+        self.parentNormalLoginButton.backgroundColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1)
+        
         self.parentNormalLoginButton.layer.shadowOpacity = 0.5
         self.parentNormalLoginButton.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.parentNormalLoginButton.layer.shadowRadius = 4.0
         self.parentFBLoginButton.backgroundColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1)
+        
+        self.parentSignUpButton.tintColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1)
+        self.parentSignUpButton.layer.borderWidth = 1
+        self.parentSignUpButton.layer.borderColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1).CGColor
+
         
         // Do any additional setup after loading the view.
         //GIDSignIn
@@ -67,6 +73,9 @@ class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
                 {
                     self.getFBUserData()
                 }
+            } else {
+                print(error.localizedDescription)
+                
             }
         }
     }
@@ -81,12 +90,7 @@ class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
             })
         }
     }
-    @IBAction func googleLoginDidTapped(sender: AnyObject) {
-        print("google signin did tapped")
-        GIDSignIn.sharedInstance().signIn()
-        
-        
-    }
+
     
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
         if error != nil {

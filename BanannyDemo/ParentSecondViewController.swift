@@ -35,8 +35,7 @@ class ParentSecondViewController: UIViewController {
         parentPWTextField.attributedPlaceholder = NSMutableAttributedString(string:"密碼", attributes:[NSForegroundColorAttributeName: UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1),NSFontAttributeName :UIFont(name: "PingFang TC", size: 18)!])
         
         //login button ui setting
-        parentLoginButton.backgroundColor = UIColor(red: 255/255, green: 246/255, blue: 219/255, alpha: 1)
-        parentLoginButton.tintColor = UIColor(red: 143/255, green: 143/255, blue: 143/255, alpha: 1)
+        parentLoginButton.backgroundColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1)
         parentLoginButton.layer.shadowOpacity = 0.5
         parentLoginButton.layer.shadowOffset = CGSize(width: 0, height: 2)
         parentLoginButton.layer.shadowRadius = 4.0

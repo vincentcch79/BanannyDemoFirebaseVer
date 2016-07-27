@@ -40,8 +40,7 @@ class BabysitterSecondViewController: UIViewController {
 
         // login button ui setting
         
-        babysitterLoginButton.backgroundColor = UIColor(red: 255/255, green: 246/255, blue: 219/255, alpha: 1)
-        babysitterLoginButton.tintColor = UIColor(red: 143/255, green: 143/255, blue: 143/255, alpha: 1)
+        babysitterLoginButton.backgroundColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1)
         babysitterLoginButton.layer.shadowOpacity = 0.5
         babysitterLoginButton.layer.shadowOffset = CGSize(width: 0, height: 2)
         babysitterLoginButton.layer.shadowRadius = 4.0
