@@ -11,6 +11,9 @@ import JSQMessagesViewController
 import MobileCoreServices
 import AVKit
 import FirebaseDatabase
+import FirebaseAuth
+import FBSDKCoreKit
+import SDWebImage
 
 class NewChatViewController: JSQMessagesViewController {
     
@@ -42,6 +45,7 @@ class NewChatViewController: JSQMessagesViewController {
         //
         self.incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "nanny_profile_01")!, diameter: 64)
         self.outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "user_profile")!, diameter: 64)
+        
         
     }
     

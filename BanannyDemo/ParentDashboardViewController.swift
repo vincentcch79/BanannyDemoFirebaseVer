@@ -8,6 +8,9 @@
 
 import UIKit
 import Cosmos
+import FirebaseAuth
+import FBSDKCoreKit
+import SDWebImage
 
 class ParentDashboardViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
@@ -73,18 +76,30 @@ class ParentDashboardViewController: UIViewController, UIPickerViewDelegate, UIP
 
         searchButton.backgroundColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1)
         
-        
-//        // textfield padding
-//        let paddingView = UIView(frame: CGRectMake(0, 0, 19, 49))
-//        parentDateDashTextField.leftView = paddingView
-//        parentDateDashTextField.leftViewMode = UITextFieldViewMode.Always
-//        parentStartTimeTextField.leftView = paddingView
-//        parentStartTimeTextField.leftViewMode = UITextFieldViewMode.Always
-//        parentFinishedTimeTextField.leftView = paddingView
-//        parentFinishedTimeTextField.leftViewMode = UITextFieldViewMode.Always
-//        parentLocationTextField.leftView = paddingView
-//        parentLocationTextField.leftViewMode = UITextFieldViewMode.Always
-        
+        // FBSDKpersonal
+//        if FBSDKAccessToken.currentAccessToken() != nil {
+//            if let user = FIRAuth.auth()?.currentUser {
+//                // User is signed in.
+//                let name = user.displayName
+//                let photoUrl = user.photoURL
+//               
+//                self.parentDashNameLabel.text = name
+//                self.parentDashImageView.sd_setImageWithURL(photoUrl)
+//                
+//            } else {
+//               
+//            }
+//        } else {
+//            
+//        }
+        if let user = FIRAuth.auth()?.currentUser {
+            if user.photoURL != nil {
+                let name = user.displayName
+                let photoUrl = user.photoURL
+                self.parentDashNameLabel.text = name
+                self.parentDashImageView.sd_setImageWithURL(photoUrl)
+            }
+        }
         
         
         
