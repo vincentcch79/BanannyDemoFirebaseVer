@@ -42,9 +42,23 @@ class NewChatViewController: JSQMessagesViewController {
         //define Firebase Database
         observeMessages()
         
-        //
+        //download image from data
+        if let user = FIRAuth.auth()?.currentUser {
+            if user.photoURL != nil {
+            
+                let url =  user.photoURL
+                if let data = NSData(contentsOfURL: url!) {
+                    self.outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(data: data), diameter: 64)
+                }
+            }
+        }
+        
+        
+        
+        
         self.incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "nanny_profile_01")!, diameter: 64)
-        self.outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "user_profile")!, diameter: 64)
+//        self.outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "user_profile")!, diameter: 64)
+        
         
         
     }
@@ -59,12 +73,16 @@ class NewChatViewController: JSQMessagesViewController {
     func observeMessages() {
         messageRef.observeEventType(.ChildAdded, withBlock: { snapshot in
             if let dict = snapshot.value as? [String: AnyObject] {
-                let MediaType = dict["MediaType"] as! String
+                _ = dict["MediaType"] as! String
                 let senderId = dict["senderId"] as! String
                 let senderName = dict["senderName"] as! String
                 let text = dict["text"] as! String
                 self.messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
-                self.collectionView.reloadData()
+                dispatch_async(dispatch_get_main_queue(), {
+                    
+                    self.collectionView.reloadData()
+                })
+                
                 self.automaticallyScrollsToMostRecentMessage = true
                 
             }
