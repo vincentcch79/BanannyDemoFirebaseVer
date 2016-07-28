@@ -2248,7 +2248,7 @@
                     <view key="view" contentMode="scaleToFill" id="K7I-vY-aDp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="zRe-4N-yAp">
                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="P87-Yf-uVB">

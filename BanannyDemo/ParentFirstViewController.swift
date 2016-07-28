@@ -77,6 +77,13 @@ class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
                     self.getFBUserData()
                     let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
                     FIRAuth.auth()?.signInWithCredential(credential, completion: nil)
+                    
+                    let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let DashTabBarViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("DashTabBarViewController")
+                    self.presentViewController(DashTabBarViewController, animated: true, completion: nil)
+//                    let dashVC = DashTabBarViewController()
+//                    self.navigationController?.pushViewController(dashVC, animated: false)
+                    
                 }
             } else if (result.isCancelled) {
                 print(error.localizedDescription)

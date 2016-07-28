@@ -178,15 +178,10 @@ class SearchDetailViewController: UIViewController, UITableViewDelegate, UITable
 //        // pass search data to chatVC
 //        chatVC.searchChatDetail = self.searchDetail
 //        self.navigationController?.pushViewController(chatVC, animated: true)
-        
-        
-        // JSQChatView
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let naviVC = storyboard.instantiateViewControllerWithIdentifier("ChatNaviVC") as! UINavigationController
-//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        appDelegate.window?.rootViewController = naviVC
-        let chatVC = NewChatViewController() as JSQMessagesViewController
-        
+
+        let chatVC = NewChatViewController()
+//            as JSQMessagesViewController
+        chatVC.searchChatDetail = self.searchDetail
         self.navigationController?.pushViewController(chatVC, animated: true)
         
        

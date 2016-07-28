@@ -25,6 +25,7 @@ class NewChatViewController: JSQMessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "\(searchChatDetail.nameResult)"
         self.senderId = "one"
         self.senderDisplayName = "Vinny"
 //        self.senderId = "two"
