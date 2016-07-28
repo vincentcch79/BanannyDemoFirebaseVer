@@ -56,7 +56,7 @@ class NewChatViewController: JSQMessagesViewController {
         
         
         
-        self.incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "nanny_profile_01")!, diameter: 64)
+        self.incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: searchChatDetail.imageResult)!, diameter: 64)
 //        self.outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "user_profile")!, diameter: 64)
         
         
@@ -73,12 +73,12 @@ class NewChatViewController: JSQMessagesViewController {
         self.automaticallyScrollsToMostRecentMessage = true
     }
     
-    func scrollToDown() {
-        let section = self.collectionView.numberOfSections()
-        let item = self.collectionView.numberOfItemsInSection(section) 
-        let indexPath = NSIndexPath(forItem: item, inSection: section)
-        self.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Bottom, animated: true)
-    }
+//    func scrollToDown() {
+//        let section = self.collectionView.numberOfSections()
+//        let item = self.collectionView.numberOfItemsInSection(section) 
+//        let indexPath = NSIndexPath(forItem: item, inSection: section)
+//        self.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Bottom, animated: true)
+//    }
     
     
     func observeMessages() {
