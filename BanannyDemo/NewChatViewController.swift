@@ -33,7 +33,9 @@ class NewChatViewController: JSQMessagesViewController {
         self.view.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
         
         self.tabBarController?.tabBar.hidden = true
-
+        
+        
+        
         //define Firebase Database
         observeMessages()
         
@@ -42,6 +44,13 @@ class NewChatViewController: JSQMessagesViewController {
         self.outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "user_profile")!, diameter: 64)
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView?.collectionViewLayout.springinessEnabled=true
+    }
+    
+    
     
     func observeMessages() {
         messageRef.observeEventType(.ChildAdded, withBlock: { snapshot in
@@ -52,7 +61,8 @@ class NewChatViewController: JSQMessagesViewController {
                 let text = dict["text"] as! String
                 self.messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
                 self.collectionView.reloadData()
-
+                self.automaticallyScrollsToMostRecentMessage = true
+                
             }
         })
     }
@@ -63,6 +73,7 @@ class NewChatViewController: JSQMessagesViewController {
         let newMessage = messageRef.childByAutoId()
         let messageData = ["text": text, "senderId": senderId, "senderName": senderDisplayName, "MediaType": "TEXT"]
         newMessage.setValue(messageData)
+        self.automaticallyScrollsToMostRecentMessage = true
         
     }
     
