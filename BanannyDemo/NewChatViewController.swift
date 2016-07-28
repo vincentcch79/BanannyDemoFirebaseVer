@@ -66,8 +66,19 @@ class NewChatViewController: JSQMessagesViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         collectionView?.collectionViewLayout.springinessEnabled=true
+        
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.automaticallyScrollsToMostRecentMessage = true
     }
     
+    func scrollToDown() {
+        let section = self.collectionView.numberOfSections()
+        let item = self.collectionView.numberOfItemsInSection(section) 
+        let indexPath = NSIndexPath(forItem: item, inSection: section)
+        self.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Bottom, animated: true)
+    }
     
     
     func observeMessages() {
@@ -81,6 +92,7 @@ class NewChatViewController: JSQMessagesViewController {
                 dispatch_async(dispatch_get_main_queue(), {
                     
                     self.collectionView.reloadData()
+//                    self.scrollToDown()
                 })
                 
                 self.automaticallyScrollsToMostRecentMessage = true
