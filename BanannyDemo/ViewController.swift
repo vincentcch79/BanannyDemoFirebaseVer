@@ -37,8 +37,8 @@ class ViewController: UIViewController {
     @IBAction func parentLoginButton(sender: AnyObject) {
 
 
-        let viewcontroller = self.storyboard?.instantiateViewControllerWithIdentifier("ParentFirstViewController") as! ParentFirstViewController
-            self.presentViewController(viewcontroller, animated: false, completion: nil)
+        let parentLoginViewcontroller = self.storyboard?.instantiateViewControllerWithIdentifier("ParentFirstViewController") as! ParentFirstViewController
+            self.presentViewController(parentLoginViewcontroller, animated: false, completion: nil)
         
     }
 

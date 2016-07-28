@@ -77,7 +77,7 @@ class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
                 self.dismissViewControllerAnimated(true, completion: nil)
             } else if result.isCancelled {
                 print("Cancelled")
-                self.dismissViewControllerAnimated(true, completion: nil)
+//                self.dismissViewControllerAnimated(true, completion: nil)
             } else {
 //                self.getFBUserData()
                 let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
