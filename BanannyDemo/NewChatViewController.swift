@@ -20,27 +20,15 @@ class NewChatViewController: JSQMessagesViewController {
     var incomingAvatar: JSQMessagesAvatarImage!
     var outgoingAvatar: JSQMessagesAvatarImage!
    
-    
 
-        
-//        
-//        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let DashTabBarViewController: UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("DashTabBarViewController")
-//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        appDelegate.window?.rootViewController = DashTabBarViewController
-//        let SearchDetailViewController: UIViewController =
-//        mainStoryBoard.instantiateViewControllerWithIdentifier("SearchDetailView")
-//        self.presentViewController(SearchDetailViewController, animated: false, completion: nil)
-//        let SearchDetailViewController: UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("SearchDetailView")
-//        self.presentViewController(SearchDetailViewController, animated: true, completion: nil)
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.senderId = "one"
-//        self.senderDisplayName = "Vinny"
-        self.senderId = "two"
-        self.senderDisplayName = "Jane"
+        self.senderId = "one"
+        self.senderDisplayName = "Vinny"
+//        self.senderId = "two"
+//        self.senderDisplayName = "Jane"
         self.view.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
         
         self.tabBarController?.tabBar.hidden = true

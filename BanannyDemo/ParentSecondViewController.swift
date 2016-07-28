@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ParentSecondViewController: UIViewController {
     @IBOutlet weak var parentEmailTextField: UITextField!
@@ -59,7 +61,20 @@ class ParentSecondViewController: UIViewController {
     }
     */
     @IBAction func parentLoginButton(sender: AnyObject) {
-        Helper.helper.loginAnonymously()
+//        Helper.helper.loginAnonymously()
+        FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
+            if error == nil {
+                let uid = user!.uid
+                print(uid)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let naviVC = storyboard.instantiateViewControllerWithIdentifier("DashTabBarViewController") as! DashTabBarViewController
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.window?.rootViewController = naviVC
+
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
     }
 
 }

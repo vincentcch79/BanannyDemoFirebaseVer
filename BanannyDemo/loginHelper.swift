@@ -32,7 +32,7 @@ class Helper {
     
     
     }
-    
+
     
     func loginWithGoogle(authentication: GIDAuthentication) {
         

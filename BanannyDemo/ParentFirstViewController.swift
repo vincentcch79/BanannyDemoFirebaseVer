@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import GoogleSignIn
+import Firebase
 
 class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
@@ -24,6 +25,7 @@ class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
+        
         // button ui setting
         self.parentNormalLoginButton.backgroundColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1)
         
@@ -62,6 +64,7 @@ class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
     }
     */
     @IBAction func parentNormalLoginButton(sender: AnyObject) {
+        
     }
     @IBAction func parentFBLoginButton(sender: AnyObject) {
         
@@ -72,8 +75,10 @@ class ParentFirstViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
                 if(fbloginresult.grantedPermissions.contains("email"))
                 {
                     self.getFBUserData()
+                    let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+                    FIRAuth.auth()?.signInWithCredential(credential, completion: nil)
                 }
-            } else {
+            } else if (result.isCancelled) {
                 print(error.localizedDescription)
                 
             }
