@@ -72,9 +72,9 @@ class NotifViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.notifCellTitleLabel.text = notifViewClasses[indexPath.row].notifTitle
         cell.notifCellDateLabel.text = notifViewClasses[indexPath.row].notifDate
         cell.notifCellContentLabel.text = notifViewClasses[indexPath.row].notifContent
-    
+        
         return cell
-    
+        
     }
     
     

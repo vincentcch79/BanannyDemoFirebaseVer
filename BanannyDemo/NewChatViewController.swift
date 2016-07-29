@@ -112,7 +112,7 @@ class NewChatViewController: JSQMessagesViewController {
                 })
                 
                 self.automaticallyScrollsToMostRecentMessage = true
-                
+                self.finishReceivingMessageAnimated(true)
             }
         })
     }
