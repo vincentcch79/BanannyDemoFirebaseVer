@@ -18,10 +18,10 @@ class BookConfirmViewController: UIViewController, UITableViewDelegate, UITableV
     let customCellIdentifier = "ConfirmTableViewCell"
     
     var confirmDetail:[paymentClass] = [
-    paymentClass(paymentTitle: "托育日期", paymentContent: "6月7日"),
-    paymentClass(paymentTitle: "托育時間", paymentContent: "14:00 - 19:00(5hr)"),
+    paymentClass(paymentTitle: "托育日期", paymentContent: "8月27日"),
+    paymentClass(paymentTitle: "托育時間", paymentContent: "20:00 - 21:30(1.5hr)"),
     paymentClass(paymentTitle: "每小時收費", paymentContent: "500/hr"),
-    paymentClass(paymentTitle: "總金額", paymentContent: "$2500"),
+    paymentClass(paymentTitle: "總金額", paymentContent: "$1250"),
     paymentClass(paymentTitle: "托育地址", paymentContent: "新北市淡水區中正東路二段100巷3號"),
     paymentClass(paymentTitle: "備註", paymentContent: "我家小孩很愛流口水")
     ]
