@@ -15,6 +15,8 @@ class RatingActionViewController: UIViewController {
     @IBOutlet weak var ratingScrollBackground: UIScrollView!
     @IBOutlet weak var ratingActionContentView: UIView!
     
+    @IBOutlet weak var ratingBlurView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,5 +50,20 @@ class RatingActionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func sendRatingActionButton(sender: AnyObject) {
+        self.ratingBlurView.hidden = false
+        let AlertView = NSBundle.mainBundle().loadNibNamed("ConfirmRatingView", owner: nil, options: nil).first as! ConfirmRatingView
+        AlertView.frame.size = CGSize(width: 300, height: 380)
+        AlertView.center = CGPoint(x: UIScreen.mainScreen().bounds.midX, y: UIScreen.mainScreen().bounds.height * 0.4)
+        
+        self.view.addSubview(AlertView)
+        
+        AlertView.setActionHandler("confirmRatingAction") { () -> Void in
+            self.ratingBlurView.hidden = true
+            AlertView.removeFromSuperview()
+            
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        
+     }
+    }
 }

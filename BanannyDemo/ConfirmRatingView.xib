@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ConfirmRatingView" customModule="BanannyDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="357"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-1O-cLw">
+                    <rect key="frame" x="0.0" y="56" width="300" height="301"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7d1-Rb-pbE">
+                            <rect key="frame" x="36" y="225" width="229" height="52"/>
+                            <color key="backgroundColor" red="0.38823529411764707" green="0.42352941176470588" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="229" id="LxR-X1-tp2"/>
+                                <constraint firstAttribute="height" constant="52" id="YCe-4O-u0a"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
+                            <state key="normal" title="確定">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmRatingAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="zTx-kt-RW5"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="謝謝你！                          你的每一次評價都對我們平台非常重要。希望我們可以一直帶給你更好的平台使用體驗。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc1-lO-NnU">
+                            <rect key="frame" x="36" y="8" width="229" height="209"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="209" id="gXP-pW-i7c"/>
+                                <constraint firstAttribute="width" constant="229" id="kom-Pw-26H"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="18"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="7d1-Rb-pbE" secondAttribute="bottom" constant="24" id="4I0-yR-rt7"/>
+                        <constraint firstItem="7d1-Rb-pbE" firstAttribute="centerX" secondItem="zMy-1O-cLw" secondAttribute="centerX" id="Edl-U3-RLz"/>
+                        <constraint firstItem="sc1-lO-NnU" firstAttribute="top" secondItem="zMy-1O-cLw" secondAttribute="top" constant="8" id="Koc-35-Abn"/>
+                        <constraint firstItem="7d1-Rb-pbE" firstAttribute="top" secondItem="sc1-lO-NnU" secondAttribute="bottom" constant="8" id="Vyj-Qb-zDn"/>
+                        <constraint firstItem="sc1-lO-NnU" firstAttribute="centerX" secondItem="zMy-1O-cLw" secondAttribute="centerX" id="piW-FT-P32"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="謝謝你的評價" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNO-XG-V9e">
+                    <rect key="frame" x="81" y="0.0" width="139" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="HDc-KN-M6b"/>
+                        <constraint firstAttribute="width" constant="139" id="zaw-BL-0XX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
+                    <color key="textColor" red="0.54509803921568623" green="0.52156862745098043" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.93333333333333335" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="FNO-XG-V9e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3aq-r5-nuD"/>
+                <constraint firstAttribute="trailing" secondItem="zMy-1O-cLw" secondAttribute="trailing" id="7SJ-ML-6HP"/>
+                <constraint firstItem="zMy-1O-cLw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Jmw-1E-MNC"/>
+                <constraint firstItem="zMy-1O-cLw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="56" id="Otq-O8-jk7"/>
+                <constraint firstAttribute="bottom" secondItem="zMy-1O-cLw" secondAttribute="bottom" id="Pm1-bE-1c0"/>
+                <constraint firstItem="FNO-XG-V9e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PxG-ez-efv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

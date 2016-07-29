@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9D222F99D16F7180F1B57417 /* Pods_BanannyDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70AAAD8809448AD5A7B9DA6 /* Pods_BanannyDemo.framework */; };
+		9F0E3AEE1D4B504A007AB35D /* ConfirmRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0E3AED1D4B504A007AB35D /* ConfirmRatingView.xib */; };
+		9F0E3AF01D4B52A5007AB35D /* ConfirmRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E3AEF1D4B52A5007AB35D /* ConfirmRatingView.swift */; };
 		9F14D36D1D3DC40600530EF6 /* SearchDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F14D36B1D3DC40600530EF6 /* SearchDetailTableViewCell.swift */; };
 		9F14D36E1D3DC40600530EF6 /* SearchDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F14D36C1D3DC40600530EF6 /* SearchDetailTableViewCell.xib */; };
 		9F14D3711D3DC9E300530EF6 /* SecondSearchDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F14D36F1D3DC9E300530EF6 /* SecondSearchDetailTableViewCell.swift */; };
@@ -66,6 +68,8 @@
 /* Begin PBXFileReference section */
 		4E80D7C36B44B414D3C16661 /* Pods-BanannyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanannyDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BanannyDemo/Pods-BanannyDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6E4A7E05C9E3EE3FC0284AA8 /* Pods-BanannyDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanannyDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BanannyDemo/Pods-BanannyDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9F0E3AED1D4B504A007AB35D /* ConfirmRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmRatingView.xib; sourceTree = "<group>"; };
+		9F0E3AEF1D4B52A5007AB35D /* ConfirmRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmRatingView.swift; sourceTree = "<group>"; };
 		9F14D36B1D3DC40600530EF6 /* SearchDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewCell.swift; sourceTree = "<group>"; };
 		9F14D36C1D3DC40600530EF6 /* SearchDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchDetailTableViewCell.xib; sourceTree = "<group>"; };
 		9F14D36F1D3DC9E300530EF6 /* SecondSearchDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondSearchDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 				9F14D3901D3E67F500530EF6 /* NotifTableViewCell.xib */,
 				9F2C62D41D3F2485001195A0 /* MsgCustomTableViewCell.swift */,
 				9F2C62D51D3F2485001195A0 /* MsgCustomTableViewCell.xib */,
+				9F0E3AED1D4B504A007AB35D /* ConfirmRatingView.xib */,
+				9F0E3AEF1D4B52A5007AB35D /* ConfirmRatingView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				9F2599621D377ACA0064C105 /* Main.storyboard in Resources */,
 				9F14D38C1D3E2E7D00530EF6 /* ConfirmMsgView.xib in Resources */,
 				9F2599701D377DAE0064C105 /* loginView.storyboard in Resources */,
+				9F0E3AEE1D4B504A007AB35D /* ConfirmRatingView.xib in Resources */,
 				9F14D3881D3E22EA00530EF6 /* ConfirmAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +427,7 @@
 				9F2EE1C61D38855900F05354 /* DemoChatIemFactory.swift in Sources */,
 				9F3CA68B1D3CCB6E003555F7 /* DashTabBarViewController.swift in Sources */,
 				9FB8013C1D378A5E00DE3142 /* BabysitterDashboardViewController.swift in Sources */,
+				9F0E3AF01D4B52A5007AB35D /* ConfirmRatingView.swift in Sources */,
 				9F14D3941D3E6CE200530EF6 /* NotifClass.swift in Sources */,
 				9F2C62CD1D3F0C40001195A0 /* paymentConfirmViewController.swift in Sources */,
 				9F2EE1CA1D38859500F05354 /* DemoChatDataSource.swift in Sources */,

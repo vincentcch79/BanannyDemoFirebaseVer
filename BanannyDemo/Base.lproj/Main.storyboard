@@ -1564,6 +1564,9 @@
                                                 <state key="normal" title="送出評價">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="sendRatingActionButton:" destination="fAb-fV-Owz" eventType="touchUpInside" id="5k3-HG-Wqj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1586,13 +1589,21 @@
                                     <constraint firstAttribute="trailing" secondItem="WAi-PS-aXD" secondAttribute="trailing" id="wmc-eH-7FL"/>
                                 </constraints>
                             </scrollView>
+                            <view hidden="YES" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvO-gu-yIb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="to8-nn-PqD" firstAttribute="top" secondItem="089-Ls-2jm" secondAttribute="bottom" id="Axj-0L-8Z6"/>
+                            <constraint firstAttribute="bottom" secondItem="hvO-gu-yIb" secondAttribute="bottom" id="JBz-gb-PtD"/>
                             <constraint firstAttribute="trailing" secondItem="to8-nn-PqD" secondAttribute="trailing" id="Q35-NC-Vqg"/>
+                            <constraint firstItem="hvO-gu-yIb" firstAttribute="leading" secondItem="crJ-ah-1Tg" secondAttribute="leading" id="bMi-Iu-eaH"/>
                             <constraint firstItem="to8-nn-PqD" firstAttribute="leading" secondItem="crJ-ah-1Tg" secondAttribute="leading" id="jsY-aR-DKA"/>
+                            <constraint firstAttribute="trailing" secondItem="hvO-gu-yIb" secondAttribute="trailing" id="uHc-ML-Q4R"/>
                             <constraint firstItem="CxD-P6-snc" firstAttribute="top" secondItem="to8-nn-PqD" secondAttribute="bottom" id="xHY-dk-Bg9"/>
+                            <constraint firstItem="hvO-gu-yIb" firstAttribute="top" secondItem="crJ-ah-1Tg" secondAttribute="top" id="yT1-gl-4g0"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1600,6 +1611,7 @@
                     <connections>
                         <outlet property="ratingActionBackground" destination="WAi-PS-aXD" id="3Ut-hE-1oR"/>
                         <outlet property="ratingActionContentView" destination="68o-FT-JlR" id="71Y-sH-sqf"/>
+                        <outlet property="ratingBlurView" destination="hvO-gu-yIb" id="g2N-KY-MU6"/>
                         <outlet property="ratingScrollBackground" destination="to8-nn-PqD" id="MeH-2j-xhT"/>
                         <outlet property="sendRatingButton" destination="0Uk-UQ-uLO" id="Hi1-c8-beT"/>
                     </connections>

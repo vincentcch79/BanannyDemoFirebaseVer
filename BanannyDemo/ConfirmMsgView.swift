@@ -12,8 +12,6 @@ class ConfirmMsgView: UIView {
     @IBOutlet weak var backgroundMsgView: UIView!
     @IBOutlet weak var backgroundMsgTitle: UILabel!
     @IBOutlet weak var confirmMsgButton: UIButton!
-    
-    
     @IBAction func secondConfirm(sender: AnyObject) {
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.center = CGPoint(x: UIScreen.mainScreen().bounds.midX, y: UIScreen.mainScreen().bounds.maxY)

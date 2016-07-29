@@ -89,12 +89,6 @@ class NewChatViewController: JSQMessagesViewController {
         self.automaticallyScrollsToMostRecentMessage = true
     }
     
-//    func scrollToDown() {
-//        let section = self.collectionView.numberOfSections()
-//        let item = self.collectionView.numberOfItemsInSection(section) 
-//        let indexPath = NSIndexPath(forItem: item, inSection: section)
-//        self.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Bottom, animated: true)
-//    }
     
     
     func observeMessages() {
@@ -108,7 +102,7 @@ class NewChatViewController: JSQMessagesViewController {
                 dispatch_async(dispatch_get_main_queue(), {
                     
                     self.collectionView.reloadData()
-//                    self.scrollToDown()
+
                 })
                 
                 self.automaticallyScrollsToMostRecentMessage = true
@@ -123,6 +117,7 @@ class NewChatViewController: JSQMessagesViewController {
         let newMessage = messageRef.childByAutoId()
         let messageData = ["text": text, "senderId": senderId, "senderName": senderDisplayName, "MediaType": "TEXT"]
         newMessage.setValue(messageData)
+        JSQSystemSoundPlayer.jsq_playMessageSentSound()
         self.automaticallyScrollsToMostRecentMessage = true
         
     }
