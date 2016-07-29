@@ -28,7 +28,7 @@ class NewChatViewController: JSQMessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "\(searchChatDetail.nameResult)"
+        self.title = "\(searchChatDetail.nameResult)保姆 訊息"
         self.senderId = "one"
         self.senderDisplayName = "Vinny"
 //        self.senderId = "two"
@@ -55,12 +55,28 @@ class NewChatViewController: JSQMessagesViewController {
         
         
         
-        
+        // setting avatar image
         self.incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: searchChatDetail.imageResult)!, diameter: 64)
 //        self.outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "user_profile")!, diameter: 64)
         
+        // add navigation bar item
+        let bookNavButton = UIButton()
+        bookNavButton.frame = CGRectMake(0, 0, 90, 38)
+        bookNavButton.backgroundColor = UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1)
+        bookNavButton.setTitle("預約", forState: UIControlState.Normal)
+        bookNavButton.tintColor = UIColor.whiteColor()
+        bookNavButton.addTarget(self, action: #selector(NewChatViewController.bookInChatView(_:)), forControlEvents: .TouchUpInside)
+        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(customView: bookNavButton), animated: true)
+        // get rid of backbaritem's description
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         
-        
+    }
+    
+    
+    func bookInChatView (sender: UIButton!) {
+        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let BookConfirmViewController: UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("BookConfirm")
+        self.navigationController?.pushViewController(BookConfirmViewController, animated: true)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -119,10 +135,10 @@ class NewChatViewController: JSQMessagesViewController {
         let sheet = UIAlertController(title: "傳送影音檔案", message: "請選擇你要傳送的檔案", preferredStyle: UIAlertControllerStyle.ActionSheet)
         let cancel = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (alert: UIAlertAction) in
         }
-        let photoLibrary = UIAlertAction(title: "Photo Library", style: UIAlertActionStyle.Default) { (alert: UIAlertAction) in
+        let photoLibrary = UIAlertAction(title: "傳送照片", style: UIAlertActionStyle.Default) { (alert: UIAlertAction) in
             self.getMediaFrom(kUTTypeImage)
         }
-        let videoLibrary = UIAlertAction(title: "Video Library", style: UIAlertActionStyle.Default) { (alert: UIAlertAction) in
+        let videoLibrary = UIAlertAction(title: "傳送影片", style: UIAlertActionStyle.Default) { (alert: UIAlertAction) in
             self.getMediaFrom(kUTTypeMovie)
         }
         

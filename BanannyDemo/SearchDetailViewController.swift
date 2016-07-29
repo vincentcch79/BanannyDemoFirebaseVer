@@ -67,6 +67,7 @@ class SearchDetailViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
         
     }
@@ -154,33 +155,10 @@ class SearchDetailViewController: UIViewController, UITableViewDelegate, UITable
     
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     @IBAction func ChatViewButton(sender: AnyObject) {
-   // TGChatViewController
-//        let chatItemsDecorator = TGChatItemsDecorator()
-//        let demoDataSource = TGChatDataSource()
-//        demoDataSource.chatItems = DemoChatItemFactory.createChatItemsTG()
-//        
-//        let chatVC = TGChatViewController()
-//        chatVC.chatItemsDecorator = chatItemsDecorator
-//        chatVC.chatDataSource = demoDataSource
-//        chatVC.title = title
-//        
-//        // pass search data to chatVC
-//        chatVC.searchChatDetail = self.searchDetail
-//        self.navigationController?.pushViewController(chatVC, animated: true)
+
 
         let chatVC = NewChatViewController()
-//            as JSQMessagesViewController
         chatVC.searchChatDetail = self.searchDetail
         self.navigationController?.pushViewController(chatVC, animated: true)
         
