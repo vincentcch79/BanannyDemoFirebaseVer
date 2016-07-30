@@ -1724,7 +1724,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8v-98-OSN">
                                             <rect key="frame" x="200" y="0.0" width="200" height="101"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="130" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zn6-je-fb1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zn6-je-fb1">
                                                     <rect key="frame" x="76" y="6" width="49" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="hvs-sX-rda"/>
@@ -1756,18 +1756,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LL8-d4-3Uc">
                                             <rect key="frame" x="400" y="0.0" width="200" height="101"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRT-IK-kZU">
-                                                    <rect key="frame" x="67" y="6" width="67" height="42"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="42" id="2du-8l-wwJ"/>
-                                                        <constraint firstAttribute="width" constant="67" id="Gcf-bc-HGX"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="30"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="托育案件起始年" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1x-Vk-iA9">
-                                                    <rect key="frame" x="60" y="49" width="81" height="40"/>
+                                                    <rect key="frame" x="60" y="48" width="81" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="81" id="7Kn-We-KhN"/>
                                                         <constraint firstAttribute="height" constant="40" id="Nmk-tR-gpt"/>
@@ -1776,19 +1766,29 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2007" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRT-IK-kZU">
+                                                    <rect key="frame" x="63" y="6" width="74" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="2du-8l-wwJ"/>
+                                                        <constraint firstAttribute="width" constant="74" id="Gcf-bc-HGX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="30"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="HRT-IK-kZU" firstAttribute="centerX" secondItem="LL8-d4-3Uc" secondAttribute="centerX" id="Dgq-z0-gvi"/>
                                                 <constraint firstItem="HRT-IK-kZU" firstAttribute="top" secondItem="LL8-d4-3Uc" secondAttribute="top" constant="6" id="Kvr-0H-aY8"/>
-                                                <constraint firstItem="k1x-Vk-iA9" firstAttribute="top" secondItem="HRT-IK-kZU" secondAttribute="bottom" constant="1" id="gsN-f3-l9q"/>
+                                                <constraint firstItem="k1x-Vk-iA9" firstAttribute="top" secondItem="HRT-IK-kZU" secondAttribute="bottom" id="gsN-f3-l9q"/>
                                                 <constraint firstItem="k1x-Vk-iA9" firstAttribute="centerX" secondItem="HRT-IK-kZU" secondAttribute="centerX" id="jcS-em-isv"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAK-GW-OSv">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="101"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="197" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRP-L5-wlG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRP-L5-wlG">
                                                     <rect key="frame" x="76" y="6" width="47" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="M3g-wU-1lr"/>
