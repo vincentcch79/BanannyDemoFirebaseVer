@@ -16,16 +16,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="特殊時段每小時加收費" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="577-7J-L3G">
-                        <rect key="frame" x="35" y="22" width="165" height="25"/>
+                        <rect key="frame" x="24" y="22" width="180" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="165" id="j0p-ib-g0V"/>
+                            <constraint firstAttribute="width" constant="180" id="j0p-ib-g0V"/>
                             <constraint firstAttribute="height" constant="25" id="zyY-2k-928"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500/hr" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hc-Qu-5Tz">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500/hr" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hc-Qu-5Tz">
                         <rect key="frame" x="208" y="16" width="104" height="37"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="104" id="Sqd-83-YOX"/>
@@ -38,7 +38,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="577-7J-L3G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="5XA-dk-zrD"/>
-                    <constraint firstItem="577-7J-L3G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="V3A-dk-cfb"/>
+                    <constraint firstItem="577-7J-L3G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="V3A-dk-cfb"/>
                     <constraint firstAttribute="trailing" secondItem="8Hc-Qu-5Tz" secondAttribute="trailing" constant="8" id="YZ9-ue-F8C"/>
                     <constraint firstItem="8Hc-Qu-5Tz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="hEo-2H-7LD"/>
                     <constraint firstAttribute="bottomMargin" secondItem="577-7J-L3G" secondAttribute="bottom" constant="14.5" id="ygP-WV-v1W"/>

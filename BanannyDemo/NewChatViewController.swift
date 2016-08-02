@@ -29,10 +29,10 @@ class NewChatViewController: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "\(searchChatDetail.nameResult)保姆 訊息"
-//        self.senderId = "one"
-//        self.senderDisplayName = "Vinny"
-        self.senderId = "two"
-        self.senderDisplayName = "Jane"
+        self.senderId = "one"
+        self.senderDisplayName = "Vinny"
+//        self.senderId = "two"
+//        self.senderDisplayName = "Jane"
         self.view.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
         
         self.tabBarController?.tabBar.hidden = true
@@ -201,7 +201,7 @@ class NewChatViewController: JSQMessagesViewController {
         let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
         if messages[indexPath.item].senderId == senderId {
             
-            cell.textView?.textColor = UIColor.whiteColor()
+            cell.textView?.textColor = UIColor.blackColor()
             
         } else {
             
