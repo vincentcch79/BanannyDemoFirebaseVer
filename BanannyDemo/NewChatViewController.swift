@@ -179,7 +179,7 @@ class NewChatViewController: JSQMessagesViewController {
 //        return bubbleFactory.outgoingMessagesBubbleImageWithColor(.lightGrayColor())
         if messages[indexPath.item].senderId == senderId {
             return
-            JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor(red: 220/255, green: 220/255, blue: 233/255, alpha: 1))
+            JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor(red: 99/255, green: 108/255, blue: 163/255, alpha: 1))
             
         } else {
             return
@@ -201,7 +201,7 @@ class NewChatViewController: JSQMessagesViewController {
         let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
         if messages[indexPath.item].senderId == senderId {
             
-            cell.textView?.textColor = UIColor.blackColor()
+            cell.textView?.textColor = UIColor.whiteColor()
             
         } else {
             
