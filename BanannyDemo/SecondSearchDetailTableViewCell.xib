@@ -16,21 +16,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="特殊托育經驗" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-th-8cf">
-                        <rect key="frame" x="35" y="22" width="100" height="25"/>
+                        <rect key="frame" x="24" y="22" width="100" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="SXZ-gT-DSR"/>
                             <constraint firstAttribute="height" constant="25" id="rHl-nP-kPE"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我有帶過自閉兒童，過動兒" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tch-kS-Prt">
-                        <rect key="frame" x="35" y="55" width="250" height="29.5"/>
+                        <rect key="frame" x="24" y="55" width="261" height="29.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="250" id="paH-yk-fOv"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="default">
@@ -43,9 +43,9 @@
                 <constraints>
                     <constraint firstItem="Tch-kS-Prt" firstAttribute="top" secondItem="Vvj-th-8cf" secondAttribute="bottom" constant="8" id="2U7-Ob-ahD"/>
                     <constraint firstAttribute="bottom" secondItem="Tch-kS-Prt" secondAttribute="bottom" constant="16" id="GVN-1Y-gEr"/>
-                    <constraint firstItem="Vvj-th-8cf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="Wtf-HZ-29d"/>
+                    <constraint firstItem="Vvj-th-8cf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="Wtf-HZ-29d"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Tch-kS-Prt" secondAttribute="trailing" constant="27" id="cBS-Q0-77d"/>
-                    <constraint firstItem="Tch-kS-Prt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="f6r-A6-E43"/>
+                    <constraint firstItem="Tch-kS-Prt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="f6r-A6-E43"/>
                     <constraint firstItem="Vvj-th-8cf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="fWM-IG-slt"/>
                 </constraints>
             </tableViewCellContentView>

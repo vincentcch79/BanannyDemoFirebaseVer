@@ -21,7 +21,7 @@
                             <constraint firstAttribute="width" constant="180" id="j0p-ib-g0V"/>
                             <constraint firstAttribute="height" constant="25" id="zyY-2k-928"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
